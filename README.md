@@ -36,7 +36,7 @@ for eslint.
 
 ## Backend
 
-The backend is stubbed in [Express](https://expressjs.com/).
+The backend is stubbed in [Express](https://expressjs.com/). To return an updated balance after withdrawing or depositing the balance is stored in a simple text file.
 
 ### Getting started
 
