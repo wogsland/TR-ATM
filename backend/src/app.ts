@@ -9,6 +9,11 @@ app.get('/', (req: Request, res: Response) => {
   res.send('Hello World!');
 });
 
+app.get('/pin', (req: Request, res: Response) => {
+  const pinResponse = { "success": true }
+  res.send(JSON.stringify(pinResponse));
+});
+
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
