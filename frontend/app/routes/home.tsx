@@ -1,3 +1,4 @@
+/* eslint no-empty-pattern: off */
 import type { Route } from "./+types/home";
 import { Welcome } from "../welcome/welcome";
 
