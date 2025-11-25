@@ -20,7 +20,7 @@ and the frontend can be found running at [localhost:5173](http://localhost:5173/
 
 ## Backend
 
-The backend is stubbed in [Express](https://expressjs.com/).
+The backend is stubbed in [Express](https://expressjs.com/). To return an updated balance after withdrawing or depositing the balance is stored in a simple text file.
 
 ### Getting started
 
