@@ -2,13 +2,18 @@
   "name": "backend",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "main": "index.js",
   "scripts": {
+    "check-format": "prettier --check .",
     "dev": "ts-node src/index.ts",
+    "format": "prettier --write .",
+    "lint": "eslint .",
     "setup": "npm i && echo 1000 > balance"
   },
   "author": "Bradley J. Wogsland",
   "devDependencies": {
+    "@eslint/js": "^9.39.1",
     "@types/express": "^5.0.5",
     "@types/node": "^24.10.1",
     "eslint": "^9.39.1",
@@ -18,6 +23,7 @@
     "npm": "^11.6.3",
     "prettier": "^3.6.2",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.48.0"
   }
 }
