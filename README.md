@@ -28,7 +28,7 @@ From the project root directory
 
 ```
 cd backend
-npm i
+npm run setup
 npm run dev
 ```
 

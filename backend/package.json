@@ -4,7 +4,8 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node src/index.ts"
+    "dev": "ts-node src/index.ts",
+    "setup": "npm i && echo 1000 > balance"
   },
   "author": "Bradley J. Wogsland",
   "devDependencies": {
