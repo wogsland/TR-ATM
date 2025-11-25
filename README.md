@@ -18,6 +18,22 @@ npm run dev
 
 and the frontend can be found running at [localhost:5173](http://localhost:5173/).
 
+### Checks
+
+To ensure consistent code prettier and eslint are being applied when pushing to GitHub. They can also be run locally in the frontend directory using
+
+```
+npm run check-format
+```
+
+for prettier and
+
+```
+npm run lint
+```
+
+for eslint.
+
 ## Backend
 
 The backend is stubbed in [Express](https://expressjs.com/). To return an updated balance after withdrawing or depositing the balance is stored in a simple text file.
@@ -33,6 +49,26 @@ npm run dev
 ```
 
 and the backend can be found running at [localhost:3000](http://localhost:3000/).
+
+### Checks
+
+To ensure consistent code prettier and eslint are being applied when pushing to GitHub. They can also be run locally in the frontend directory using
+
+```
+npm run check-format
+```
+
+for prettier and
+
+```
+npm run lint
+```
+
+for eslint.
+
+### Tests
+
+Since the backend is only stubbed, tests are TBD.
 
 # Casetext Homework Assignment
 Your task in this challenge is to build a demo web app that is a functional ATM machine. Please use a stubbed backend as if you were interacting with a server (ie reading from a file or local storage). Feel free to add any bells and whistles you’d like.

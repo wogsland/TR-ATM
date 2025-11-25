@@ -1,33 +1,33 @@
-import express, { Request, Response } from 'express';
-import { readFileSync, writeFileSync } from 'fs';
+import express, { Request, Response } from "express";
+import { readFileSync, writeFileSync } from "fs";
 
 const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
-app.get('/', (req: Request, res: Response) => {
-  res.send('Hello World!');
+app.get("/", (req: Request, res: Response) => {
+  res.send("Hello World!");
 });
 
-app.get('/balance', (req: Request, res: Response) => {
-  const balance = readFileSync('./balance', 'utf-8').trim();
-  const balanceResponse = { "balance": balance }
+app.get("/balance", (req: Request, res: Response) => {
+  const balance = readFileSync("./balance", "utf-8").trim();
+  const balanceResponse = { balance: balance };
   res.send(JSON.stringify(balanceResponse));
 });
 
-app.get('/deposit/:amount', (req: Request, res: Response) => {
+app.get("/deposit/:amount", (req: Request, res: Response) => {
   const depositAmount = Number(req.params.amount);
-  const priorBalance = Number(readFileSync('./balance', 'utf-8').trim());
+  const priorBalance = Number(readFileSync("./balance", "utf-8").trim());
   const newBalance = (priorBalance + depositAmount).toString();
-  writeFileSync('./balance', newBalance)
-  const updatedBalance = Number(readFileSync('./balance', 'utf-8').trim());
-  const balanceResponse = { "balance": updatedBalance }
+  writeFileSync("./balance", newBalance);
+  const updatedBalance = Number(readFileSync("./balance", "utf-8").trim());
+  const balanceResponse = { balance: updatedBalance };
   res.send(JSON.stringify(balanceResponse));
 });
 
-app.get('/pin', (req: Request, res: Response) => {
-  const pinResponse = { "success": true }
+app.get("/pin", (req: Request, res: Response) => {
+  const pinResponse = { success: true };
   res.send(JSON.stringify(pinResponse));
 });
 
