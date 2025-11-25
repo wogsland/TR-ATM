@@ -10,11 +10,11 @@ The frontend uses [React Router](https://reactrouter.com/home) and requires at l
 
 From the project root directory
 
-'''
+```
 cd frontend
 npm i
 npm run dev
-'''
+```
 
 and the frontend can be found running at [localhost:5173](http://localhost:5173/).
 
@@ -26,11 +26,11 @@ The backend is stubbed in [Express](https://expressjs.com/).
 
 From the project root directory
 
-'''
+```
 cd backend
 npm i
 npm run dev
-'''
+```
 
 and the backend can be found running at [localhost:3000](http://localhost:3000/).
 
