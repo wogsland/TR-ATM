@@ -1,3 +1,39 @@
+# ATM
+
+This is a demo ATM project.
+
+## Frontend
+
+The frontend uses [React Router](https://reactrouter.com/home) and requires at least node v20.19.5 and npm v10.8.2 to run.
+
+### Getting started
+
+From the project root directory
+
+'''
+cd frontend
+npm i
+npm run dev
+'''
+
+and the frontend can be found running at [localhost:5173](http://localhost:5173/).
+
+## Backend
+
+The backend is stubbed in [Express](https://expressjs.com/).
+
+### Getting started
+
+From the project root directory
+
+'''
+cd backend
+npm i
+npm run dev
+'''
+
+and the backend can be found running at [localhost:3000](http://localhost:3000/).
+
 # Casetext Homework Assignment
 Your task in this challenge is to build a demo web app that is a functional ATM machine. Please use a stubbed backend as if you were interacting with a server (ie reading from a file or local storage). Feel free to add any bells and whistles you’d like.
 
