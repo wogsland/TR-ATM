@@ -31,6 +31,16 @@ app.get("/pin", (req: Request, res: Response) => {
   res.send(JSON.stringify(pinResponse));
 });
 
+app.get("/withdraw/:amount", (req: Request, res: Response) => {
+  const withdrawAmount = Number(req.params.amount);
+  const priorBalance = Number(readFileSync("./balance", "utf-8").trim());
+  const newBalance = (priorBalance - withdrawAmount).toString();
+  writeFileSync("./balance", newBalance);
+  const updatedBalance = Number(readFileSync("./balance", "utf-8").trim());
+  const balanceResponse = { balance: updatedBalance };
+  res.send(JSON.stringify(balanceResponse));
+});
+
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
