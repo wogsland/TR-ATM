@@ -31,28 +31,28 @@ export function Welcome() {
         <div className="w-[500px] max-w-[100vw] p-4 flex bg-white items-end">
           <div className="w-[100px] max-w-[100vw] p-4">
             <ul className="">
-              <li class="mb-3">
+              <li className="mb-3">
                 <a
                   href="#"
-                  class="rounded-md bg-gray-500 px-10 py-1 text-sm font-semibold text-white shadow-xs hover:bg-gray-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500"
+                  className="rounded-md bg-gray-500 px-10 py-1 text-sm font-semibold text-white shadow-xs hover:bg-gray-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500"
                 ></a>
               </li>
-              <li class="mb-3">
+              <li className="mb-3">
                 <a
                   href="#"
-                  class="rounded-md bg-gray-500 px-10 py-1 text-sm font-semibold text-white shadow-xs hover:bg-gray-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500"
+                  className="rounded-md bg-gray-500 px-10 py-1 text-sm font-semibold text-white shadow-xs hover:bg-gray-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500"
                 ></a>
               </li>
-              <li class="mb-3">
+              <li className="mb-3">
                 <a
                   href="#"
-                  class="rounded-md bg-gray-500 px-10 py-1 text-sm font-semibold text-white shadow-xs hover:bg-gray-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500"
+                  className="rounded-md bg-gray-500 px-10 py-1 text-sm font-semibold text-white shadow-xs hover:bg-gray-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500"
                 ></a>
               </li>
               <li>
                 <a
                   href="#"
-                  class="rounded-md bg-gray-500 px-10 py-1 text-sm font-semibold text-white shadow-xs hover:bg-gray-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500"
+                  className="rounded-md bg-gray-500 px-10 py-1 text-sm font-semibold text-white shadow-xs hover:bg-gray-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500"
                 ></a>
               </li>
             </ul>
@@ -62,7 +62,7 @@ export function Welcome() {
               <p className="leading-8 text-gray-700 dark:text-gray-200 text-center">
                 Welcome to the ATM
               </p>
-              <div class="mt-10 flex items-justify gap-x-6">
+              <div className="mt-10 flex items-justify gap-x-6">
                 <ul>
                   <li>---</li>
                   <li>---</li>
@@ -80,28 +80,28 @@ export function Welcome() {
           </div>
           <div className="w-[100px] max-w-[100vw] p-4">
             <ul>
-              <li class="mb-3">
+              <li className="mb-3">
                 <a
                   href="#"
-                  class="rounded-md bg-gray-500 px-10 py-1 text-sm font-semibold text-white shadow-xs hover:bg-gray-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500"
+                  className="rounded-md bg-gray-500 px-10 py-1 text-sm font-semibold text-white shadow-xs hover:bg-gray-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500"
                 ></a>
               </li>
-              <li class="mb-3">
+              <li className="mb-3">
                 <a
                   href="#"
-                  class="rounded-md bg-gray-500 px-10 py-1 text-sm font-semibold text-white shadow-xs hover:bg-gray-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500"
+                  className="rounded-md bg-gray-500 px-10 py-1 text-sm font-semibold text-white shadow-xs hover:bg-gray-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500"
                 ></a>
               </li>
-              <li class="mb-3">
+              <li className="mb-3">
                 <a
                   href="#"
-                  class="rounded-md bg-gray-500 px-10 py-1 text-sm font-semibold text-white shadow-xs hover:bg-gray-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500"
+                  className="rounded-md bg-gray-500 px-10 py-1 text-sm font-semibold text-white shadow-xs hover:bg-gray-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500"
                 ></a>
               </li>
               <li>
                 <a
                   href="#"
-                  class="rounded-md bg-gray-500 px-10 py-1 text-sm font-semibold text-white shadow-xs hover:bg-gray-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500"
+                  className="rounded-md bg-gray-500 px-10 py-1 text-sm font-semibold text-white shadow-xs hover:bg-gray-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500"
                 ></a>
               </li>
             </ul>
