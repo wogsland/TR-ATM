@@ -67,7 +67,7 @@ export function ChoiceScreen({
         />
         <div className="mt-10 flex items-justify gap-x-6">
           <ul>
-            <li>---</li>
+            <li>Cancel</li>
           </ul>
           <ul>
             <li>Execute</li>
