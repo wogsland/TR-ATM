@@ -53,7 +53,7 @@ export function Screen({ textVersion = "entry", amount, setAmount }: Props) {
         <div />
         <div />
         <div>
-            <img
+          <img
             src="../../assets/systems.png"
             alt="systems"
             className="block w-full"

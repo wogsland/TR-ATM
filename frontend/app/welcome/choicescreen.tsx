@@ -39,7 +39,7 @@ export function ChoiceScreen({
       <div className="mb-2 text-left">{options[3]}</div>
       <div className="mb-2 text-right">{options[7]}</div>
     </div>
-  )
+  );
   if ("options" == choice) {
     return optionGrid;
   }
