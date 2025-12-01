@@ -10,7 +10,7 @@ export function HiddenNumbersInput({ finishPin }: Props) {
       e.preventDefault();
       setValue(value.replace("_", "*"));
     }
-    if( value.indexOf("_") < 0) {
+    if (value.indexOf("_") < 0) {
       finishPin();
     }
     document.addEventListener("keydown", keyDownHandler);
@@ -19,9 +19,10 @@ export function HiddenNumbersInput({ finishPin }: Props) {
       document.removeEventListener("keydown", keyDownHandler);
     };
   }, [value]);
-  return(
+  return (
     <div className="text-gray-700 dark:text-gray-200 text-center items-center">
-    {value}<br />
+      {value}
+      <br />
     </div>
   );
 }

@@ -3,20 +3,11 @@ import { HiddenNumbersInput } from "./hiddennumbersinput";
 interface Props {
   textVersion: "entry" | "pin" | "main" | "deposit" | "withdrawal" | "balance";
   choice: "options" | "hiddenNumbers" | "numbers";
-};
+}
 
-export function ChoiceScreen({textVersion, choice}: Props) {
+export function ChoiceScreen({ textVersion, choice }: Props) {
   if ("options" == choice) {
-    const options = [
-      "---",
-      "---",
-      "---",
-      "---",
-      "---",
-      "---",
-      "---",
-      "---",
-    ];
+    const options = ["---", "---", "---", "---", "---", "---", "---", "---"];
     if ("entry" == textVersion) {
       options[7] = "Enter PIN ---";
     }
@@ -46,10 +37,9 @@ export function ChoiceScreen({textVersion, choice}: Props) {
   }
   if ("hiddenNumbers" == choice) {
     const finishPin = () => {
-      window.location.href = window.location.protocol + '//' + window.location.host + "/main";
+      window.location.href =
+        window.location.protocol + "//" + window.location.host + "/main";
     };
-    return(
-      <HiddenNumbersInput finishPin={finishPin} />
-    );
+    return <HiddenNumbersInput finishPin={finishPin} />;
   }
 }

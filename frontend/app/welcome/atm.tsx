@@ -1,9 +1,9 @@
-import { Screen } from './screen';
-import { ScreenButton } from './screenbutton';
+import { Screen } from "./screen";
+import { ScreenButton } from "./screenbutton";
 
 interface Props {
   textVersion?: "entry" | "pin" | "main" | "deposit" | "withdrawal" | "balance";
-};
+}
 
 export function ATM({ textVersion = "entry" }: Props) {
   return (
@@ -52,7 +52,7 @@ export function ATM({ textVersion = "entry" }: Props) {
               </li>
             </ul>
           </div>
-          <Screen textVersion={textVersion}/>
+          <Screen textVersion={textVersion} />
           <div className="w-[100px] max-w-[100vw] p-4">
             <ul>
               <li className="mb-3">

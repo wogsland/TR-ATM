@@ -1,6 +1,6 @@
 interface Props {
   href?: string;
-};
+}
 
 export function ScreenButton({ href = "#" }: Props) {
   return (
