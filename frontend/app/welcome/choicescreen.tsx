@@ -36,9 +36,15 @@ export function ChoiceScreen({ textVersion, choice }: Props) {
     );
   }
   if ("hiddenNumbers" == choice) {
-    const finishPin = () => {
-      window.location.href =
-        window.location.protocol + "//" + window.location.host + "/main";
+    const finishPin = async () => {
+      const response = await fetch("http://localhost:3000/pin");
+      const result = await response.json();
+      if (result.success) {
+        window.location.href =
+          window.location.protocol + "//" + window.location.host + "/main";
+      } else {
+        alert("Incorrect PIN");
+      }
     };
     return <HiddenNumbersInput finishPin={finishPin} />;
   }
