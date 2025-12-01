@@ -12,7 +12,7 @@ From the project root directory
 
 ```
 cd frontend
-npm i
+npm ci
 npm run dev
 ```
 
@@ -44,6 +44,7 @@ From the project root directory
 
 ```
 cd backend
+npm ci
 npm run setup
 npm run dev
 ```
