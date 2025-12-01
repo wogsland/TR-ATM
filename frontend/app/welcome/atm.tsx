@@ -131,6 +131,7 @@ export function ATM({ textVersion = "entry" }: Props) {
             </ul>
           </div>
         </div>
+        <div className="w-[500px] pb-200 bg-white" />
       </div>
     </main>
   );
