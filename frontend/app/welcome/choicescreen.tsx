@@ -1,3 +1,5 @@
+import { HiddenNumbersInput } from "./hiddennumbersinput";
+
 interface Props {
   textVersion: "entry" | "pin" | "main" | "deposit" | "withdrawal" | "balance";
   choice: "options" | "hiddenNumbers" | "numbers";
@@ -13,8 +15,18 @@ export function ChoiceScreen({textVersion, choice}: Props) {
       "---",
       "---",
       "---",
-      "Enter PIN ---",
+      "---",
     ];
+    if ("entry" == textVersion) {
+      options[7] = "Enter PIN ---";
+    }
+    if ("main" == textVersion) {
+      options[2] = "Withdrawal";
+      options[3] = "Deposit";
+      options[5] = "Exit";
+      options[6] = "Balance";
+      options[7] = "Re-Enter PIN";
+    }
     return (
       <div className="mt-10 flex items-justify gap-x-6">
         <ul>
@@ -33,10 +45,11 @@ export function ChoiceScreen({textVersion, choice}: Props) {
     );
   }
   if ("hiddenNumbers" == choice) {
+    const finishPin = () => {
+      window.location.href = window.location.protocol + '//' + window.location.host + "/main";
+    };
     return(
-      <div className="text-gray-700 dark:text-gray-200 text-center">
-      _ _ _ _ _ _
-      </div>
+      <HiddenNumbersInput finishPin={finishPin} />
     );
   }
 }
