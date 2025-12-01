@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { Cards } from "./cards";
 import { Screen } from "./screen";
 import { ScreenButton } from "./screenbutton";
 
@@ -6,6 +8,7 @@ interface Props {
 }
 
 export function ATM({ textVersion = "entry" }: Props) {
+  const selectedCard = textVersion != "entry" && textVersion != "pin" ? "visa" : undefined;
   return (
     <main className="flex items-center justify-center pt-16 pb-4">
       <div className="flex-1 flex flex-col items-center gap-16 min-h-0">
@@ -23,18 +26,7 @@ export function ATM({ textVersion = "entry" }: Props) {
             />
           </div>
         </header>
-        <div className="w-[500px] max-w-[100vw] p-4 flex flex-col items-center bg-white">
-          <img
-            src="../../assets/creditcard_sprite.png"
-            alt="ATM"
-            className="block w-full dark:hidden"
-          />
-          <img
-            src="../../assets/creditcard_sprite.png"
-            alt="ATM"
-            className="hidden w-[50%] dark:block"
-          />
-        </div>
+        <Cards selected={selectedCard} />
         <div className="w-[500px] max-w-[100vw] p-4 flex bg-white items-end">
           <div className="w-[100px] max-w-[100vw] p-4">
             <ul className="">
