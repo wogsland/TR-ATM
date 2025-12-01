@@ -37,8 +37,8 @@ export function Screen({ textVersion = "entry", amount, setAmount }: Props) {
         ? "numbers"
         : "options";
   return (
-    <div className="max-w-[300px] w-full space-y-6 px-4">
-      <nav className="border-5  border-gray-200 pt-6 pr-6 pl-6 mb-2 dark:border-gray-200 space-y-4 bg-blue-400">
+    <div className="max-w-[380px] w-full space-y-6 px-4">
+      <nav className="border-5  border-gray-200 pt-6 pr-6 pl-6 mb-2 dark:border-gray-200 space-y-4 bg-[#80b5d3]">
         <p className="leading-8 text-gray-700 dark:text-gray-200 text-center">
           {title[textVersion]}
         </p>
