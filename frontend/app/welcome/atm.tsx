@@ -23,9 +23,22 @@ export function ATM({ textVersion = "entry" }: Props) {
     }
   };
 
+  const withdraw = async (amount: number) => {
+    const response = await fetch("http://localhost:3000/withdraw/" + amount);
+    if (response.status == 200) {
+      window.location.href =
+        window.location.protocol + "//" + window.location.host + "/balance";
+    } else {
+      alert("Error withdrawing");
+    }
+  };
+
   const executeTransaction = () => {
     if ("deposit" == textVersion) {
       deposit(amount);
+    }
+    if ("withdrawal" == textVersion) {
+      withdraw(amount);
     }
   };
 
@@ -57,14 +70,20 @@ export function ATM({ textVersion = "entry" }: Props) {
                 <ScreenButton />
               </li>
               <li className="mb-3">
-                <ScreenButton />
+                <ScreenButton
+                  href={
+                    "main" == textVersion || "balance" == textVersion
+                      ? "withdrawal"
+                      : undefined
+                  }
+                />
               </li>
               <li>
                 <ScreenButton
                   href={
                     "main" == textVersion || "balance" == textVersion
                       ? "deposit"
-                      : "#"
+                      : undefined
                   }
                 />
               </li>
@@ -85,7 +104,7 @@ export function ATM({ textVersion = "entry" }: Props) {
                   href={
                     "main" == textVersion || "balance" == textVersion
                       ? "/"
-                      : "#"
+                      : undefined
                   }
                 />
               </li>
@@ -94,7 +113,7 @@ export function ATM({ textVersion = "entry" }: Props) {
                   href={
                     "main" == textVersion || "balance" == textVersion
                       ? "balance"
-                      : "#"
+                      : undefined
                   }
                 />
               </li>
@@ -102,7 +121,10 @@ export function ATM({ textVersion = "entry" }: Props) {
                 <ScreenButton
                   href={"deposit" != textVersion ? "pin" : undefined}
                   onClick={(e) => {
-                    if ("deposit" == textVersion) {
+                    if (
+                      "deposit" == textVersion ||
+                      "withdrawal" == textVersion
+                    ) {
                       e.preventDefault();
                       executeTransaction();
                     }
