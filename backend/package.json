@@ -9,7 +9,7 @@
     "dev": "tsx src/index.ts",
     "format": "prettier --write .",
     "lint": "eslint .",
-    "setup": "npm i && echo 1000 > balance"
+    "setup": "echo 1000 > balance"
   },
   "author": "Bradley J. Wogsland",
   "devDependencies": {
@@ -25,5 +25,8 @@
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.48.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5"
   }
 }

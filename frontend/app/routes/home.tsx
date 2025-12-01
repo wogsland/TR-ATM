@@ -1,6 +1,6 @@
 /* eslint no-empty-pattern: off */
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import { ATM } from "../welcome/atm";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -10,5 +10,5 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <Welcome />;
+  return <ATM textVersion="entry" />;
 }
