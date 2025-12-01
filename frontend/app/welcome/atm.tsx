@@ -84,7 +84,8 @@ export function ATM({ textVersion = "entry" }: Props) {
                     "main" == textVersion || "balance" == textVersion
                       ? "deposit"
                       : "deposit" == textVersion || "withdrawal" == textVersion
-                      ? "main" : undefined
+                        ? "main"
+                        : undefined
                   }
                 />
               </li>
