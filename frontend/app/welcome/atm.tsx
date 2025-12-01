@@ -45,7 +45,7 @@ export function ATM({ textVersion = "entry" }: Props) {
   return (
     <main className="flex items-center justify-center pt-16 pb-4">
       <div className="flex-1 flex flex-col items-center min-h-0">
-        <header className="flex flex-col items-center gap-9 rounded-[1vw] pr-20 pl-20 pt-4 pb-4 bg-sky-700">
+        <header className="flex flex-col items-center gap-9 rounded-[1vw] pr-20 pl-20 pt-4 pb-4 bg-[#1b6eac]">
           <div className="w-[400px]">
             <img
               src="../../assets/atm_sign.png"
