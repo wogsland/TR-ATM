@@ -8,7 +8,7 @@ export function ScreenButton({ href = "#", onClick }: Props) {
     <a
       href={href}
       onClick={onClick}
-      className="rounded-md bg-gray-500 px-10 py-1 text-sm font-semibold text-white shadow-xs hover:bg-gray-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500"
+      className="rounded-lg bg-gray-300 px-7 py-1 hover:bg-gray-400 border-t-4 border-t-gray-200 border-b-4 border-b-gray-400"
     ></a>
   );
 }

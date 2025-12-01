@@ -5,7 +5,7 @@ interface Props {
 export function Cards({ selected }: Props) {
   console.log("selected", selected);
   return (
-    <div className="w-[500px] max-w-[100vw] p-4 flex flex-col items-center bg-white">
+    <div className="w-[500px] max-w-[100vw] pt-4 pr-4 pl-4 flex flex-col items-center bg-white border-t-8 border-gray-300">
       <img
         src="../../assets/creditcard_sprite.png"
         alt="ATM"

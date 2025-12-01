@@ -13,34 +13,35 @@ export function ChoiceScreen({
   amount,
   setAmount,
 }: Props) {
+  const options = ["", "", "", "", "", "", "", ""];
+  if ("entry" == textVersion) {
+    options[7] = "Enter PIN";
+  }
+  if ("main" == textVersion || "balance" == textVersion) {
+    options[2] = "Withdrawal";
+    options[3] = "Deposit";
+    options[5] = "Exit";
+    options[6] = "Balance";
+    options[7] = "Enter PIN";
+  }
+  if ("deposit" == textVersion || "withdrawal" == textVersion) {
+    options[3] = "Cancel";
+    options[7] = "Execute";
+  }
+  const optionGrid = (
+    <div className="grid grid-cols-2">
+      <div className="mb-10 text-xs text-left">{options[0]}</div>
+      <div className="mb-10 text-xs text-right">{options[4]}</div>
+      <div className="mb-10 text-xs text-left">{options[1]}</div>
+      <div className="mb-10 text-xs text-right">{options[5]}</div>
+      <div className="mb-10 text-xs text-left">{options[2]}</div>
+      <div className="mb-10 text-xs text-right">{options[6]}</div>
+      <div className="mb-7 text-xs text-left">{options[3]}</div>
+      <div className="mb-7 text-xs text-right">{options[7]}</div>
+    </div>
+  );
   if ("options" == choice) {
-    const options = ["---", "---", "---", "---", "---", "---", "---", "---"];
-    if ("entry" == textVersion) {
-      options[7] = "Enter PIN ---";
-    }
-    if ("main" == textVersion || "balance" == textVersion) {
-      options[2] = "Withdrawal";
-      options[3] = "Deposit";
-      options[5] = "Exit";
-      options[6] = "Balance";
-      options[7] = "Re-Enter PIN";
-    }
-    return (
-      <div className="mt-10 flex items-justify gap-x-6">
-        <ul>
-          <li>{options[0]}</li>
-          <li>{options[1]}</li>
-          <li>{options[2]}</li>
-          <li>{options[3]}</li>
-        </ul>
-        <ul>
-          <li>{options[4]}</li>
-          <li>{options[5]}</li>
-          <li>{options[6]}</li>
-          <li>{options[7]}</li>
-        </ul>
-      </div>
-    );
+    return optionGrid;
   }
   if ("hiddenNumbers" == choice) {
     const finishPin = async () => {
@@ -58,21 +59,16 @@ export function ChoiceScreen({
   if ("numbers" == choice) {
     return (
       <div>
-        <input
-          className="bg-white text-gray-700 align-right"
-          value={amount > 0 ? amount : ""}
-          onChange={(event) => {
-            setAmount(event.currentTarget.value);
-          }}
-        />
-        <div className="mt-10 flex items-justify gap-x-6">
-          <ul>
-            <li>Cancel</li>
-          </ul>
-          <ul>
-            <li>Execute</li>
-          </ul>
-        </div>
+        <center>
+          <input
+            className="bg-white text-gray-700 w-[200px]"
+            value={amount > 0 ? amount : ""}
+            onChange={(event) => {
+              setAmount(event.currentTarget.value);
+            }}
+          />
+        </center>
+        {optionGrid}
       </div>
     );
   }
