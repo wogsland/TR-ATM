@@ -51,10 +51,10 @@ export function ATM({ textVersion = "entry" }: Props) {
                 <ScreenButton />
               </li>
               <li className="mb-3">
-                <ScreenButton />
+                <ScreenButton href={"main" == textVersion || "balance" == textVersion ? "/" : "#"}/>
               </li>
               <li className="mb-3">
-                <ScreenButton />
+                <ScreenButton href={"main" == textVersion || "balance" == textVersion ? "balance" : "#"}/>
               </li>
               <li>
                 <ScreenButton href="pin" />
