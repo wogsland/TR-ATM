@@ -4,6 +4,7 @@ export default [
   index("routes/home.tsx"),
   route("balance", "routes/balance.tsx"),
   route("deposit", "routes/deposit.tsx"),
-  route("pin", "routes/pin.tsx"),
   route("main", "routes/mainmenu.tsx"),
+  route("pin", "routes/pin.tsx"),
+  route("withdrawal", "routes/withdrawal.tsx"),
 ] satisfies RouteConfig;

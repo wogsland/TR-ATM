@@ -1,5 +1,5 @@
 /* eslint no-empty-pattern: off */
-import type { Route } from "./+types/pin";
+import type { Route } from "./+types/balance";
 import { ATM } from "../welcome/atm";
 
 export function meta({}: Route.MetaArgs) {
