@@ -1,8 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans:
-    "Press Start 2P", system-ui;
+  --font-sans: "Press Start 2P", system-ui;
 }
 
 html,
