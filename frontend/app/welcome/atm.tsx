@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Cards } from "./cards";
 import { Screen } from "./screen";
 import { ScreenButton } from "./screenbutton";
@@ -7,8 +8,27 @@ interface Props {
 }
 
 export function ATM({ textVersion = "entry" }: Props) {
+  const [amount, setAmount] = useState(0);
+
   const selectedCard =
     textVersion != "entry" && textVersion != "pin" ? "visa" : undefined;
+
+  const deposit = async (amount: number) => {
+    const response = await fetch("http://localhost:3000/deposit/" + amount);
+    if (response.status == 200) {
+      window.location.href =
+        window.location.protocol + "//" + window.location.host + "/balance";
+    } else {
+      alert("Error depositing");
+    }
+  };
+
+  const executeTransaction = () => {
+    if ("deposit" == textVersion) {
+      deposit(amount);
+    }
+  };
+
   return (
     <main className="flex items-center justify-center pt-16 pb-4">
       <div className="flex-1 flex flex-col items-center gap-16 min-h-0">
@@ -40,11 +60,17 @@ export function ATM({ textVersion = "entry" }: Props) {
                 <ScreenButton />
               </li>
               <li>
-                <ScreenButton />
+                <ScreenButton
+                  href={
+                    "main" == textVersion || "balance" == textVersion
+                      ? "deposit"
+                      : "#"
+                  }
+                />
               </li>
             </ul>
           </div>
-          <Screen textVersion={textVersion} />
+          <Screen textVersion={textVersion} amount={amount} setAmount={setAmount} />
           <div className="w-[100px] max-w-[100vw] p-4">
             <ul>
               <li className="mb-3">
@@ -69,7 +95,12 @@ export function ATM({ textVersion = "entry" }: Props) {
                 />
               </li>
               <li>
-                <ScreenButton href="pin" />
+                <ScreenButton href={"deposit" != textVersion ? "pin" : undefined} onClick={(e) => {
+                  if ("deposit" == textVersion) {
+                    e.preventDefault();
+                    executeTransaction();
+                  }
+                }}/>
               </li>
             </ul>
           </div>

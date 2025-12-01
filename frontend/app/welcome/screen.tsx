@@ -3,9 +3,11 @@ import { ChoiceScreen } from "./choicescreen";
 
 interface Props {
   textVersion?: "entry" | "pin" | "main" | "deposit" | "withdrawal" | "balance";
+  amount: number;
+  setAmount: () => void;
 }
 
-export function Screen({ textVersion = "entry" }: Props) {
+export function Screen({ textVersion = "entry", amount, setAmount }: Props) {
   const [displayBalance, setDisplayBalance] = useState("");
   useEffect(() => {
     const getBalance = async () => {
@@ -40,7 +42,7 @@ export function Screen({ textVersion = "entry" }: Props) {
         <p className="leading-8 text-gray-700 dark:text-gray-200 text-center">
           {title[textVersion]}
         </p>
-        <ChoiceScreen textVersion={textVersion} choice={choice} />
+        <ChoiceScreen textVersion={textVersion} choice={choice} amount={amount} setAmount={setAmount} />
       </nav>
     </div>
   );

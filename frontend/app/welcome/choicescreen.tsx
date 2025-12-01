@@ -3,9 +3,11 @@ import { HiddenNumbersInput } from "./hiddennumbersinput";
 interface Props {
   textVersion: "entry" | "pin" | "main" | "deposit" | "withdrawal" | "balance";
   choice: "options" | "hiddenNumbers" | "numbers";
+  amount: number;
+  setAmount: () => void;
 }
 
-export function ChoiceScreen({ textVersion, choice }: Props) {
+export function ChoiceScreen({ textVersion, choice, amount, setAmount }: Props) {
   if ("options" == choice) {
     const options = ["---", "---", "---", "---", "---", "---", "---", "---"];
     if ("entry" == textVersion) {
@@ -47,5 +49,26 @@ export function ChoiceScreen({ textVersion, choice }: Props) {
       }
     };
     return <HiddenNumbersInput finishPin={finishPin} />;
+  }
+  if ("numbers" == choice) {
+    return (
+      <div>
+        <input
+          className="bg-white text-gray-700 align-right"
+          value={amount > 0 ? amount : ''}
+          onChange={(event) => {
+            setAmount(event.currentTarget.value);}
+          }
+        />
+        <div className="mt-10 flex items-justify gap-x-6">
+          <ul>
+            <li>---</li>
+          </ul>
+          <ul>
+            <li>Execute</li>
+          </ul>
+        </div>
+      </div>
+    );
   }
 }
