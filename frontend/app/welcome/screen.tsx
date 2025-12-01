@@ -6,7 +6,7 @@ interface Props {
 }
 
 export function Screen({ textVersion = "entry" }: Props) {
-  const [displayBalance, setDisplayBalance] = useState("")
+  const [displayBalance, setDisplayBalance] = useState("");
   useEffect(() => {
     const getBalance = async () => {
       const response = await fetch("http://localhost:3000/balance");
