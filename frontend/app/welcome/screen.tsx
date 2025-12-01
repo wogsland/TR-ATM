@@ -38,8 +38,8 @@ export function Screen({ textVersion = "entry", amount, setAmount }: Props) {
         : "options";
   return (
     <div className="max-w-[380px] w-full space-y-6 px-4">
-      <nav className="border-5  border-gray-200 pt-6 pr-6 pl-6 mb-2 dark:border-gray-200 space-y-4 bg-[#80b5d3]">
-        <p className="leading-8 text-gray-700 dark:text-gray-200 text-center">
+      <nav className="border-5  border-gray-200 pt-6 pr-4 pl-4 mb-2 dark:border-gray-200 space-y-4 bg-[#80b5d3]">
+        <p className="leading-8 text-gray-700 dark:text-gray-200 text-center text-lg">
           {title[textVersion]}
         </p>
         <ChoiceScreen
@@ -49,7 +49,7 @@ export function Screen({ textVersion = "entry", amount, setAmount }: Props) {
           setAmount={setAmount}
         />
       </nav>
-      <div className="grid grid-cols-3 max-w-[300px] flex flex-col items-right bg-white">
+      <div className="grid grid-cols-3 max-w-[380px] flex flex-col items-right bg-white">
         <div />
         <div />
         <div>
