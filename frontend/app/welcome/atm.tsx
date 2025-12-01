@@ -56,7 +56,7 @@ export function ATM({ textVersion = "entry" }: Props) {
         </header>
         <Cards selected={selectedCard} />
         <div className="w-[500px] max-w-[100vw] p-4 flex bg-white items-end">
-          <div className="w-[60px] max-w-[100vw] p-4">
+          <div className="w-[60px] max-w-[100vw]  pb-4 pt-4">
             <ul className="">
               <li className="mb-8">
                 <ScreenButton />
@@ -91,7 +91,7 @@ export function ATM({ textVersion = "entry" }: Props) {
             amount={amount}
             setAmount={setAmount}
           />
-          <div className="w-[60px] max-w-[100vw] p-4">
+          <div className="w-[60px] max-w-[100vw] pb-4 pt-4">
             <ul>
               <li className="mb-8">
                 <ScreenButton />
