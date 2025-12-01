@@ -38,7 +38,7 @@ export function Screen({ textVersion = "entry", amount, setAmount }: Props) {
         : "options";
   return (
     <div className="max-w-[300px] w-full space-y-6 px-4">
-      <nav className="border border-gray-200 p-6 dark:border-gray-200 space-y-4 bg-blue-400">
+      <nav className="border border-gray-200 pt-6 pr-6 pl-6 mb-2 dark:border-gray-200 space-y-4 bg-blue-400">
         <p className="leading-8 text-gray-700 dark:text-gray-200 text-center">
           {title[textVersion]}
         </p>
@@ -49,6 +49,17 @@ export function Screen({ textVersion = "entry", amount, setAmount }: Props) {
           setAmount={setAmount}
         />
       </nav>
+      <div className="grid grid-cols-3 max-w-[300px] flex flex-col items-right bg-white">
+        <div />
+        <div />
+        <div>
+            <img
+            src="../../assets/systems.png"
+            alt="systems"
+            className="block w-full"
+          />
+        </div>
+      </div>
     </div>
   );
 }

@@ -36,8 +36,8 @@ export function ChoiceScreen({
       <div className="mb-2 text-right">{options[5]}</div>
       <div className="mb-2 text-left">{options[2]}</div>
       <div className="mb-2 text-right">{options[6]}</div>
-      <div className="text-left">{options[3]}</div>
-      <div className="text-right">{options[7]}</div>
+      <div className="mb-2 text-left">{options[3]}</div>
+      <div className="mb-2 text-right">{options[7]}</div>
     </div>
   )
   if ("options" == choice) {

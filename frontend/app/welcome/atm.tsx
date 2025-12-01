@@ -78,7 +78,7 @@ export function ATM({ textVersion = "entry" }: Props) {
                   }
                 />
               </li>
-              <li>
+              <li className="mb-3">
                 <ScreenButton
                   href={
                     "main" == textVersion || "balance" == textVersion
@@ -119,7 +119,7 @@ export function ATM({ textVersion = "entry" }: Props) {
                   }
                 />
               </li>
-              <li>
+              <li className="mb-3">
                 <ScreenButton
                   href={"deposit" != textVersion ? "pin" : undefined}
                   onClick={(e) => {
@@ -134,20 +134,6 @@ export function ATM({ textVersion = "entry" }: Props) {
                 />
               </li>
             </ul>
-          </div>
-        </div>
-        <div className="w-[500px] max-w-[100vw] p-4 flex flex-col items-right bg-white">
-          <div className="w-[100px]">
-            <img
-              src="../../assets/systems.png"
-              alt="systems"
-              className="block w-full dark:hidden"
-            />
-            <img
-              src="../../assets/systems.png"
-              alt="systems"
-              className="hidden w-full dark:block"
-            />
           </div>
         </div>
       </div>
