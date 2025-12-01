@@ -83,7 +83,8 @@ export function ATM({ textVersion = "entry" }: Props) {
                   href={
                     "main" == textVersion || "balance" == textVersion
                       ? "deposit"
-                      : undefined
+                      : "deposit" == textVersion || "withdrawal" == textVersion
+                      ? "main" : undefined
                   }
                 />
               </li>
