@@ -59,13 +59,15 @@ export function ChoiceScreen({
   if ("numbers" == choice) {
     return (
       <div>
-        <input
-          className="bg-white text-gray-700 align-right"
-          value={amount > 0 ? amount : ""}
-          onChange={(event) => {
-            setAmount(event.currentTarget.value);
-          }}
-        />
+        <center>
+          <input
+            className="bg-white text-gray-700 w-[200px]"
+            value={amount > 0 ? amount : ""}
+            onChange={(event) => {
+              setAmount(event.currentTarget.value);
+            }}
+          />
+        </center>
         {optionGrid}
       </div>
     );
