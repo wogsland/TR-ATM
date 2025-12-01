@@ -1,6 +1,6 @@
 # ATM
 
-This is a demo ATM project implementing the specified [requirements](REQUIREMENTS.md).
+This is a demo ATM project implementing the specified [requirements](REQUIREMENTS.md). Further potential improvements which could be implemented beyond this are described in the [issues](https://github.com/wogsland/TR-ATM/issues).
 
 ## Frontend
 
