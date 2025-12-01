@@ -11,7 +11,7 @@ export function ChoiceScreen({ textVersion, choice }: Props) {
     if ("entry" == textVersion) {
       options[7] = "Enter PIN ---";
     }
-    if ("main" == textVersion) {
+    if ("main" == textVersion || "balance" == textVersion) {
       options[2] = "Withdrawal";
       options[3] = "Deposit";
       options[5] = "Exit";
