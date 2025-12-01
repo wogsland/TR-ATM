@@ -3,7 +3,10 @@ import type { Route } from "./+types/pin";
 import { ATM } from "../welcome/atm";
 
 export function meta({}: Route.MetaArgs) {
-  return [{ title: "ATM" }, { name: "description", content: "Please enter an amount to deposit" }];
+  return [
+    { title: "ATM" },
+    { name: "description", content: "Please enter an amount to deposit" },
+  ];
 }
 
 export default function Balance() {

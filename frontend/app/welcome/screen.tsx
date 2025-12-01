@@ -42,7 +42,12 @@ export function Screen({ textVersion = "entry", amount, setAmount }: Props) {
         <p className="leading-8 text-gray-700 dark:text-gray-200 text-center">
           {title[textVersion]}
         </p>
-        <ChoiceScreen textVersion={textVersion} choice={choice} amount={amount} setAmount={setAmount} />
+        <ChoiceScreen
+          textVersion={textVersion}
+          choice={choice}
+          amount={amount}
+          setAmount={setAmount}
+        />
       </nav>
     </div>
   );

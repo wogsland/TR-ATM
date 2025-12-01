@@ -7,7 +7,12 @@ interface Props {
   setAmount: () => void;
 }
 
-export function ChoiceScreen({ textVersion, choice, amount, setAmount }: Props) {
+export function ChoiceScreen({
+  textVersion,
+  choice,
+  amount,
+  setAmount,
+}: Props) {
   if ("options" == choice) {
     const options = ["---", "---", "---", "---", "---", "---", "---", "---"];
     if ("entry" == textVersion) {
@@ -55,10 +60,10 @@ export function ChoiceScreen({ textVersion, choice, amount, setAmount }: Props) 
       <div>
         <input
           className="bg-white text-gray-700 align-right"
-          value={amount > 0 ? amount : ''}
+          value={amount > 0 ? amount : ""}
           onChange={(event) => {
-            setAmount(event.currentTarget.value);}
-          }
+            setAmount(event.currentTarget.value);
+          }}
         />
         <div className="mt-10 flex items-justify gap-x-6">
           <ul>

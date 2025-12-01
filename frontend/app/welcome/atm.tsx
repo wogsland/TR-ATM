@@ -70,7 +70,11 @@ export function ATM({ textVersion = "entry" }: Props) {
               </li>
             </ul>
           </div>
-          <Screen textVersion={textVersion} amount={amount} setAmount={setAmount} />
+          <Screen
+            textVersion={textVersion}
+            amount={amount}
+            setAmount={setAmount}
+          />
           <div className="w-[100px] max-w-[100vw] p-4">
             <ul>
               <li className="mb-3">
@@ -95,12 +99,15 @@ export function ATM({ textVersion = "entry" }: Props) {
                 />
               </li>
               <li>
-                <ScreenButton href={"deposit" != textVersion ? "pin" : undefined} onClick={(e) => {
-                  if ("deposit" == textVersion) {
-                    e.preventDefault();
-                    executeTransaction();
-                  }
-                }}/>
+                <ScreenButton
+                  href={"deposit" != textVersion ? "pin" : undefined}
+                  onClick={(e) => {
+                    if ("deposit" == textVersion) {
+                      e.preventDefault();
+                      executeTransaction();
+                    }
+                  }}
+                />
               </li>
             </ul>
           </div>
