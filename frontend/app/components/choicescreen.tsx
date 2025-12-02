@@ -54,7 +54,12 @@ export function ChoiceScreen({
         alert("Incorrect PIN");
       }
     };
-    return <HiddenNumbersInput finishPin={finishPin} />;
+    return (
+      <div>
+        <HiddenNumbersInput finishPin={finishPin} />
+        {optionGrid}
+      </div>
+    );
   }
   if ("numbers" == choice) {
     return (
