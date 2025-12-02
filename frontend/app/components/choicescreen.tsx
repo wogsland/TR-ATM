@@ -15,18 +15,18 @@ export function ChoiceScreen({
 }: Props) {
   const options = ["", "", "", "", "", "", "", ""];
   if ("entry" == textVersion) {
-    options[7] = "Enter PIN";
+    options[7] = "Enter PIN ▬▬";
   }
   if ("main" == textVersion || "balance" == textVersion) {
-    options[2] = "Withdrawal";
-    options[3] = "Deposit";
-    options[5] = "Exit";
-    options[6] = "Balance";
-    options[7] = "Enter PIN";
+    options[2] = "▬▬ Withdrawal";
+    options[3] = "▬▬ Deposit";
+    options[5] = "Exit ▬▬";
+    options[6] = "Balance ▬▬";
+    options[7] = "Enter PIN ▬▬";
   }
   if ("deposit" == textVersion || "withdrawal" == textVersion) {
-    options[3] = "Cancel";
-    options[7] = "Execute";
+    options[3] = "▬▬ Cancel";
+    options[7] = "Execute ▬▬";
   }
   const optionGrid = (
     <div className="grid grid-cols-2">
