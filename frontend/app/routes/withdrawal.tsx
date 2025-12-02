@@ -1,6 +1,6 @@
 /* eslint no-empty-pattern: off */
 import type { Route } from "./+types/withdrawal";
-import { ATM } from "../welcome/atm";
+import { ATM } from "../components/atm";
 
 export function meta({}: Route.MetaArgs) {
   return [
