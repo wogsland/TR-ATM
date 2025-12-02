@@ -53,7 +53,7 @@ export function ATM({ textVersion = "entry" }: Props) {
               className="block w-full"
             />
           </div>
-          <div className="absolute bottom-20 left-80">
+          <div className="absolute bottom-18 left-64 w-[280px]">
             <img
               src="../../assets/graffiti.png"
               alt="ATM"
@@ -138,7 +138,15 @@ export function ATM({ textVersion = "entry" }: Props) {
             </ul>
           </div>
         </div>
-        <div className="w-[500px] pb-200 bg-white" />
+        <div className="relative w-[500px] pb-200 bg-white">
+          <div className="absolute top-[-65px] left-8 w-[200px]">
+            <img
+              src="../../assets/sticker_graf.png"
+              alt="ATM"
+              className="block w-full"
+            />
+          </div>
+        </div>
       </div>
     </main>
   );
