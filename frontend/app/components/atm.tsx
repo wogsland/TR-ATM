@@ -45,10 +45,17 @@ export function ATM({ textVersion = "entry" }: Props) {
   return (
     <main className="flex items-center justify-center pt-16 pb-4">
       <div className="flex-1 flex flex-col items-center min-h-0">
-        <header className="flex flex-col items-center gap-9 rounded-[1vw] pr-20 pl-20 pt-4 pb-4 bg-[#1b6eac]">
+        <header className="relative flex flex-col items-center gap-9 rounded-[1vw] pr-20 pl-20 pt-4 pb-4 bg-[#1b6eac]">
           <div className="w-[400px]">
             <img
               src="../../assets/atm_sign.png"
+              alt="ATM"
+              className="block w-full"
+            />
+          </div>
+          <div className="absolute bottom-18 left-64 w-[280px]">
+            <img
+              src="../../assets/graffiti.png"
               alt="ATM"
               className="block w-full"
             />
@@ -131,7 +138,15 @@ export function ATM({ textVersion = "entry" }: Props) {
             </ul>
           </div>
         </div>
-        <div className="w-[500px] pb-200 bg-white" />
+        <div className="relative w-[500px] pb-200 bg-white">
+          <div className="absolute top-[-65px] left-8 w-[200px]">
+            <img
+              src="../../assets/sticker_graf.png"
+              alt="ATM"
+              className="block w-full"
+            />
+          </div>
+        </div>
       </div>
     </main>
   );
