@@ -67,15 +67,19 @@ export function ATM({ textVersion = "entry" }: Props) {
             <ul className="">
               <li className="relative mb-8">
                 <div className="w-[60px] absolute bottom-42 left-0 mb-8">
-                  <ScreenButton side="right"/>
+                  <ScreenButton side="right" />
                 </div>
-                <div className="absolute bottom-50.5 right-0 text-gray-400">▬▬</div>
+                <div className="absolute bottom-50.5 right-0 text-gray-400">
+                  ▬▬
+                </div>
               </li>
               <li className="relative mb-8">
                 <div className="w-[60px] absolute bottom-28 left-0 mb-8">
-                  <ScreenButton side="right"/>
+                  <ScreenButton side="right" />
                 </div>
-                <div className="absolute bottom-36.5 right-0 text-gray-400">▬▬</div>
+                <div className="absolute bottom-36.5 right-0 text-gray-400">
+                  ▬▬
+                </div>
               </li>
               <li className="relative mb-8">
                 <div className="w-[60px] absolute bottom-14 left-0 mb-8">
@@ -87,7 +91,9 @@ export function ATM({ textVersion = "entry" }: Props) {
                     }
                   />
                 </div>
-                <div className="absolute bottom-22.5 right-0 text-gray-400">▬▬</div>
+                <div className="absolute bottom-22.5 right-0 text-gray-400">
+                  ▬▬
+                </div>
               </li>
               <li className="relative mb-8">
                 <div className="w-[60px] absolute bottom-0 left-0 mb-8">
@@ -95,13 +101,16 @@ export function ATM({ textVersion = "entry" }: Props) {
                     href={
                       "main" == textVersion || "balance" == textVersion
                         ? "deposit"
-                        : "deposit" == textVersion || "withdrawal" == textVersion
+                        : "deposit" == textVersion ||
+                            "withdrawal" == textVersion
                           ? "main"
                           : undefined
                     }
                   />
                 </div>
-                <div className="absolute bottom-8.5 right-0 text-gray-400">▬▬</div>
+                <div className="absolute bottom-8.5 right-0 text-gray-400">
+                  ▬▬
+                </div>
               </li>
             </ul>
           </div>
@@ -113,13 +122,17 @@ export function ATM({ textVersion = "entry" }: Props) {
           <div className="w-[105px] max-w-[100vw] pb-4 pt-4">
             <ul>
               <li className="relative mb-8">
-                <div className="absolute bottom-50.5 left-0 text-gray-400">▬▬</div>
+                <div className="absolute bottom-50.5 left-0 text-gray-400">
+                  ▬▬
+                </div>
                 <div className="w-[60px] absolute bottom-42 right-0 mb-8">
                   <ScreenButton />
                 </div>
               </li>
               <li className="relative mb-8">
-                <div className="absolute bottom-36.5 left-0 text-gray-400">▬▬</div>
+                <div className="absolute bottom-36.5 left-0 text-gray-400">
+                  ▬▬
+                </div>
                 <div className="w-[60px] absolute bottom-28 right-0 mb-8">
                   <ScreenButton
                     href={
@@ -131,7 +144,9 @@ export function ATM({ textVersion = "entry" }: Props) {
                 </div>
               </li>
               <li className="relative mb-8">
-                <div className="absolute bottom-22.5 left-0 text-gray-400">▬▬</div>
+                <div className="absolute bottom-22.5 left-0 text-gray-400">
+                  ▬▬
+                </div>
                 <div className="w-[60px] absolute bottom-14 right-0 mb-8">
                   <ScreenButton
                     href={
@@ -143,7 +158,9 @@ export function ATM({ textVersion = "entry" }: Props) {
                 </div>
               </li>
               <li className="relative mb-8">
-                <div className="absolute bottom-8.5 left-0 text-gray-400">▬▬</div>
+                <div className="absolute bottom-8.5 left-0 text-gray-400">
+                  ▬▬
+                </div>
                 <div className="w-[60px] absolute bottom-0 right-0 mb-8">
                   <ScreenButton
                     href={"deposit" != textVersion ? "pin" : undefined}
