@@ -3,8 +3,6 @@ interface Props {
 }
 
 export function Cards({ selected }: Props) {
-  console.log("selected", selected);
-
   const starLogo = () => {
     if ("star" == selected) {
       return <div className="star-active w-[30px]" />;

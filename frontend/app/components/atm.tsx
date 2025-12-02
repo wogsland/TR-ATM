@@ -63,33 +63,54 @@ export function ATM({ textVersion = "entry" }: Props) {
         </header>
         <Cards selected={selectedCard} />
         <div className="w-[500px] max-w-[100vw] p-4 flex bg-white items-end">
-          <div className="w-[60px] max-w-[100vw]  pb-4 pt-4">
+          <div className="w-[105px] max-w-[100vw] pb-4 pt-4">
             <ul className="">
-              <li className="mb-8">
-                <ScreenButton />
+              <li className="relative mb-8">
+                <div className="w-[60px] absolute bottom-42 left-0 mb-8">
+                  <ScreenButton side="right" />
+                </div>
+                <div className="absolute bottom-50.5 right-0 text-gray-400">
+                  ▬▬
+                </div>
               </li>
-              <li className="mb-8">
-                <ScreenButton />
+              <li className="relative mb-8">
+                <div className="w-[60px] absolute bottom-28 left-0 mb-8">
+                  <ScreenButton side="right" />
+                </div>
+                <div className="absolute bottom-36.5 right-0 text-gray-400">
+                  ▬▬
+                </div>
               </li>
-              <li className="mb-8">
-                <ScreenButton
-                  href={
-                    "main" == textVersion || "balance" == textVersion
-                      ? "withdrawal"
-                      : undefined
-                  }
-                />
-              </li>
-              <li className="mb-8">
-                <ScreenButton
-                  href={
-                    "main" == textVersion || "balance" == textVersion
-                      ? "deposit"
-                      : "deposit" == textVersion || "withdrawal" == textVersion
-                        ? "main"
+              <li className="relative mb-8">
+                <div className="w-[60px] absolute bottom-14 left-0 mb-8">
+                  <ScreenButton
+                    href={
+                      "main" == textVersion || "balance" == textVersion
+                        ? "withdrawal"
                         : undefined
-                  }
-                />
+                    }
+                  />
+                </div>
+                <div className="absolute bottom-22.5 right-0 text-gray-400">
+                  ▬▬
+                </div>
+              </li>
+              <li className="relative mb-8">
+                <div className="w-[60px] absolute bottom-0 left-0 mb-8">
+                  <ScreenButton
+                    href={
+                      "main" == textVersion || "balance" == textVersion
+                        ? "deposit"
+                        : "deposit" == textVersion ||
+                            "withdrawal" == textVersion
+                          ? "main"
+                          : undefined
+                    }
+                  />
+                </div>
+                <div className="absolute bottom-8.5 right-0 text-gray-400">
+                  ▬▬
+                </div>
               </li>
             </ul>
           </div>
@@ -98,42 +119,62 @@ export function ATM({ textVersion = "entry" }: Props) {
             amount={amount}
             setAmount={setAmount}
           />
-          <div className="w-[60px] max-w-[100vw] pb-4 pt-4">
+          <div className="w-[105px] max-w-[100vw] pb-4 pt-4">
             <ul>
-              <li className="mb-8">
-                <ScreenButton />
+              <li className="relative mb-8">
+                <div className="absolute bottom-50.5 left-0 text-gray-400">
+                  ▬▬
+                </div>
+                <div className="w-[60px] absolute bottom-42 right-0 mb-8">
+                  <ScreenButton />
+                </div>
               </li>
-              <li className="mb-8">
-                <ScreenButton
-                  href={
-                    "main" == textVersion || "balance" == textVersion
-                      ? "/"
-                      : undefined
-                  }
-                />
-              </li>
-              <li className="mb-8">
-                <ScreenButton
-                  href={
-                    "main" == textVersion || "balance" == textVersion
-                      ? "balance"
-                      : undefined
-                  }
-                />
-              </li>
-              <li className="mb-8">
-                <ScreenButton
-                  href={"deposit" != textVersion ? "pin" : undefined}
-                  onClick={(e) => {
-                    if (
-                      "deposit" == textVersion ||
-                      "withdrawal" == textVersion
-                    ) {
-                      e.preventDefault();
-                      executeTransaction();
+              <li className="relative mb-8">
+                <div className="absolute bottom-36.5 left-0 text-gray-400">
+                  ▬▬
+                </div>
+                <div className="w-[60px] absolute bottom-28 right-0 mb-8">
+                  <ScreenButton
+                    href={
+                      "main" == textVersion || "balance" == textVersion
+                        ? "/"
+                        : undefined
                     }
-                  }}
-                />
+                  />
+                </div>
+              </li>
+              <li className="relative mb-8">
+                <div className="absolute bottom-22.5 left-0 text-gray-400">
+                  ▬▬
+                </div>
+                <div className="w-[60px] absolute bottom-14 right-0 mb-8">
+                  <ScreenButton
+                    href={
+                      "main" == textVersion || "balance" == textVersion
+                        ? "balance"
+                        : undefined
+                    }
+                  />
+                </div>
+              </li>
+              <li className="relative mb-8">
+                <div className="absolute bottom-8.5 left-0 text-gray-400">
+                  ▬▬
+                </div>
+                <div className="w-[60px] absolute bottom-0 right-0 mb-8">
+                  <ScreenButton
+                    href={"deposit" != textVersion ? "pin" : undefined}
+                    onClick={(e) => {
+                      if (
+                        "deposit" == textVersion ||
+                        "withdrawal" == textVersion
+                      ) {
+                        e.preventDefault();
+                        executeTransaction();
+                      }
+                    }}
+                  />
+                </div>
               </li>
             </ul>
           </div>
